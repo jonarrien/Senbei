@@ -44,7 +44,8 @@
 + (id)requestWithTask:(SBTask *)task
 {
     NSString *server = [SBSettingsManager sharedSBSettingsManager].server;
-    NSString *urlString = [NSString stringWithFormat:@"%@/tasks", server, task.objectId];
+    //NSString *urlString = [NSString stringWithFormat:@"%@/tasks", server, task.objectId];
+    NSString *urlString = [NSString stringWithFormat:@"%@/tasks", server];
     NSURL *url = [NSURL URLWithString:urlString];
     
     NSInteger idValue = [SBAppDelegate sharedAppDelegate].currentUser.objectId;
